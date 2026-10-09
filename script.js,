@@ -1,0 +1,237 @@
+
+const knowledge = [
+  {
+    q: ["c'est quoi le forex", "definition forex", "définition forex", "marche des devises"],
+    a: "Le Forex est le marché sur lequel s'échangent les devises. Les traders spéculent notamment sur les variations de paires comme EUR/USD, GBP/USD et USD/JPY. Le trading comporte un risque de perte."
+  },
+  {
+    q: ["xauusd", "c'est quoi le gold", "trading or", "cours de l'or"],
+    a: "XAUUSD représente généralement le prix d'une once d'or exprimé en dollars américains. L'or peut réagir aux taux d'intérêt, au dollar, à l'inflation et aux risques géopolitiques. Cette réponse ne fournit pas de cours en temps réel."
+  },
+  {
+    q: ["gestion du risque", "risque par trade", "risk management", "risquer combien"],
+    a: "La gestion du risque consiste à limiter les pertes possibles. Une méthode pédagogique consiste à définir le risque avant chaque entrée, placer un stop-loss adapté et éviter de risquer une part excessive du capital. Même une bonne stratégie peut subir des pertes."
+  },
+  {
+    q: ["c'est quoi le cpi", "inflation américaine", "indice des prix"],
+    a: "Le CPI est l'indice des prix à la consommation. Il mesure l'évolution des prix d'un panier de biens et services. Un chiffre supérieur aux attentes peut influencer les anticipations de taux et provoquer de la volatilité sur le dollar et l'or."
+  },
+  {
+    q: ["analyse technique", "technical analysis"],
+    a: "L'analyse technique étudie les graphiques, les prix, les tendances, les supports, les résistances et les figures de marché. Elle aide à organiser un scénario, mais ne garantit jamais le résultat d'un trade."
+  },
+  {
+    q: ["analyse fondamentale", "fondamentaux", "fundamental analysis"],
+    a: "L'analyse fondamentale étudie les facteurs économiques et financiers qui influencent les marchés : inflation, emploi, croissance, décisions des banques centrales et événements géopolitiques."
+  },
+  {
+    q: ["support", "zone de support"],
+    a: "Un support est une zone de prix où la demande a historiquement freiné une baisse. Il peut céder et ne doit pas être considéré comme une garantie de rebond."
+  },
+  {
+    q: ["résistance", "resistance", "zone de résistance"],
+    a: "Une résistance est une zone où la pression vendeuse a historiquement freiné la hausse. Une cassure peut se produire, mais il est utile d'attendre une confirmation adaptée à sa stratégie."
+  },
+  {
+    q: ["stop loss", "stop-loss", "stoploss"],
+    a: "Un stop-loss est un ordre destiné à limiter la perte sur une position. En période de forte volatilité, le prix d'exécution peut différer du niveau demandé. Détermine le risque avant d'entrer en position."
+  },
+  {
+    q: ["take profit", "take-profit", "tp"],
+    a: "Le take-profit est un niveau prévu pour clôturer une position lorsque le prix atteint un objectif. Il doit être cohérent avec la stratégie et le risque accepté."
+  },
+  {
+    q: ["effet de levier", "leverage"],
+    a: "L'effet de levier permet de contrôler une position plus importante que le capital mobilisé. Il amplifie l'exposition et peut accélérer les pertes. Un levier élevé ne signifie pas qu'un trade a davantage de chances de réussir."
+  },
+  {
+    q: ["c'est quoi un pip", "pip forex"],
+    a: "Un pip est une unité de variation du prix utilisée sur de nombreuses paires Forex. Il correspond souvent à 0,0001, mais généralement à 0,01 pour les paires cotées en yens. Vérifie les spécifications de l'instrument."
+  },
+  {
+    q: ["lot", "taille de lot", "lot trading"],
+    a: "La taille du lot indique le volume d'une position. La valeur d'un mouvement dépend de l'instrument, du volume et de la devise du compte. Calcule le volume à partir du risque prévu et de la distance du stop."
+  },
+  {
+    q: ["spread", "c'est quoi le spread"],
+    a: "Le spread est l'écart entre le prix d'achat et le prix de vente. Il représente un coût de transaction qui peut varier selon l'instrument, le courtier et les conditions du marché."
+  },
+  {
+    q: ["swap", "frais overnight"],
+    a: "Le swap est un frais ou crédit pouvant s'appliquer lorsqu'une position est conservée pendant la nuit. Son montant dépend du courtier, de l'instrument et des conditions du compte."
+  },
+  {
+    q: ["c'est quoi le cpi", "cpi"],
+    a: "Le CPI mesure l'évolution des prix à la consommation. Les marchés comparent généralement le chiffre publié aux attentes et aux données précédentes pour évaluer les perspectives d'inflation."
+  },
+  {
+    q: ["nfp", "non farm payrolls", "rapport emploi américain"],
+    a: "Les NFP sont les chiffres mensuels de l'emploi salarié non agricole aux États-Unis. Ils peuvent influencer le dollar, les taux et l'or. Les réactions dépendent aussi des attentes et des autres données publiées."
+  },
+  {
+    q: ["banque centrale", "fed", "réserve fédérale"],
+    a: "La Réserve fédérale américaine, ou Fed, conduit la politique monétaire des États-Unis. Ses décisions de taux et ses communications peuvent influencer les obligations, le dollar, les actions et l'or."
+  },
+  {
+    q: ["taux d'intérêt", "taux directeur"],
+    a: "Les taux directeurs influencent le coût du crédit et les conditions financières. Leurs variations et les attentes du marché peuvent affecter les devises, les actions et les métaux précieux."
+  },
+  {
+    q: ["psychologie trading", "émotions trading", "peur et cupidité"],
+    a: "La psychologie du trading concerne la discipline, la patience et la gestion des émotions. Un journal, des règles écrites et des limites de risque peuvent aider à éviter les décisions impulsives."
+  },
+  {
+    q: ["revenge trading", "trading de revanche"],
+    a: "Le revenge trading consiste à reprendre des positions impulsivement pour tenter de récupérer une perte. Une pause après une perte et une limite de trades peuvent aider à interrompre ce comportement."
+  },
+  {
+    q: ["journal de trading", "trading journal"],
+    a: "Un journal de trading consigne les entrées, sorties, raisons du trade, risque, résultat et état émotionnel. Il permet d'évaluer une stratégie sur un échantillon de transactions plutôt que sur quelques résultats."
+  },
+  {
+    q: ["backtest", "backtesting"],
+    a: "Le backtesting consiste à tester des règles de trading sur des données historiques. Il faut tenir compte des frais, du spread, du slippage et du risque de suradaptation aux données passées."
+  },
+  {
+    q: ["compte demo", "démo trading", "demo trading"],
+    a: "Un compte démo permet de s'entraîner avec des fonds virtuels. Il aide à tester une méthode, mais les émotions et les conditions d'exécution peuvent différer de celles d'un compte réel."
+  },
+  {
+    q: ["cryptomonnaie", "bitcoin", "crypto"],
+    a: "Les cryptomonnaies sont des actifs numériques, souvent caractérisés par une forte volatilité. Avant d'investir, il faut comprendre les risques de perte, de sécurité, de liquidité et de réglementation."
+  },
+  {
+    q: ["action en bourse", "acheter des actions", "actions"],
+    a: "Une action représente une part du capital d'une entreprise. Sa valeur peut évoluer selon les résultats de l'entreprise, les conditions économiques, les taux d'intérêt et les attentes des investisseurs."
+  },
+  {
+    q: ["diversification", "diversifier investissement"],
+    a: "La diversification répartit les investissements entre différents actifs ou secteurs. Elle peut réduire certains risques spécifiques, sans éliminer le risque de perte globale."
+  },
+  {
+    q: ["intérêt composé", "capitalisation"],
+    a: "Les intérêts composés correspondent au fait de générer des gains sur le capital initial et sur les gains réinvestis. Les résultats réels ne sont jamais garantis et peuvent aussi être négatifs."
+  },
+  {
+    q: ["inflation", "définition inflation"],
+    a: "L'inflation est une hausse générale du niveau des prix. Elle réduit le pouvoir d'achat lorsque les revenus n'augmentent pas au même rythme."
+  },
+  {
+    q: ["liquidité", "liquidité marché"],
+    a: "La liquidité décrit la facilité avec laquelle un actif peut être acheté ou vendu sans trop affecter son prix. Une faible liquidité peut entraîner des spreads plus larges et des mouvements brusques."
+  },
+  {
+    q: ["volatilité", "volatilité marché"],
+    a: "La volatilité mesure l'ampleur des variations de prix. Une forte volatilité peut créer davantage d'opportunités, mais augmente aussi l'incertitude et le risque."
+  },
+  {
+    q: ["bonjour", "salut", "salam", "bonsoir"],
+    a: "Salam ! Bienvenue sur Nomad Finance. Pose-moi une question sur le Forex, le Gold, les marchés, l'économie ou la gestion du risque."
+  },
+  {
+    q: ["merci", "merci beaucoup"],
+    a: "Avec plaisir ! Continue à apprendre et à vérifier les informations avant de prendre une décision financière. Quelle est ta prochaine question ?"
+  }
+];
+
+const messages = document.getElementById("messages");
+const form = document.getElementById("chat-form");
+const input = document.getElementById("question");
+const typing = document.getElementById("typing");
+
+function normalize(text) {
+  return text
+    .toLocaleLowerCase("fr")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’']/g, " ")
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function addMessage(text, sender) {
+  const article = document.createElement("article");
+  article.className = `message ${sender}`;
+
+  const avatar = document.createElement("span");
+  avatar.className = "avatar";
+  avatar.textContent = sender === "bot" ? "NF" : "TOI";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+
+  const title = document.createElement("strong");
+  title.textContent = sender === "bot" ? "Nomad Finance" : "Ta question";
+
+  const paragraph = document.createElement("p");
+  paragraph.textContent = text;
+
+  bubble.append(title, paragraph);
+  article.append(avatar, bubble);
+  messages.appendChild(article);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function findAnswer(question) {
+  const normalizedQuestion = normalize(question);
+  const words = normalizedQuestion.split(" ").filter(word => word.length > 2);
+
+  let bestEntry = null;
+  let bestScore = 0;
+
+  for (const entry of knowledge) {
+    let score = 0;
+
+    for (const keyword of entry.q) {
+      const normalizedKeyword = normalize(keyword);
+
+      if (normalizedQuestion.includes(normalizedKeyword)) {
+        score = Math.max(score, normalizedKeyword.split(" ").length + 2);
+      } else {
+        const keywordWords = normalizedKeyword.split(" ");
+        const matches = keywordWords.filter(word => words.includes(word)).length;
+
+        if (keywordWords.length > 0) {
+          score = Math.max(score, matches / keywordWords.length);
+        }
+      }
+    }
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestEntry = entry;
+    }
+  }
+
+  if (bestEntry && bestScore >= 0.6) {
+    return bestEntry.a;
+  }
+
+  return "Je n'ai pas encore de réponse fiable à cette question dans ma base. Essaie une formulation différente ou demande-moi un sujet précis : Forex, XAUUSD, CPI, gestion du risque ou psychologie du trading. Cette version fonctionne avec une base prédéfinie et ne consulte pas les marchés en temps réel.";
+}
+
+form.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const question = input.value.trim();
+  if (!question) return;
+
+  addMessage(question, "user");
+  input.value = "";
+  typing.hidden = false;
+
+  // Réponse locale : aucune API ni clé secrète nécessaire.
+  window.setTimeout(() => {
+    addMessage(findAnswer(question), "bot");
+    typing.hidden = true;
+    input.focus();
+  }, 250);
+});
+
+document.querySelectorAll("[data-question]").forEach(button => {
+  button.addEventListener("click", () => {
+    input.value = button.dataset.question;
+    form.requestSubmit();
+  });
+});
