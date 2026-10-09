@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Assistant financier francophone : Forex, Gold, économie et gestion du risque.">
+  <title>Nomad Finance — Assistant financier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">N<span>F</span></div>
+      <div>
+        <h1>Nomad Finance</h1>
+        <p>TON ASSISTANT FINANCIER</p>
+      </div>
+      <span class="status">● En ligne</span>
+    </header>
+
+    <section class="intro">
+      <span class="eyebrow">FINANCE • TRADING • ÉCONOMIE</span>
+      <h2>Comprends les marchés.<br><span>Développe tes connaissances.</span></h2>
+      <p>Pose une question sur la finance et explore notre base de connaissances.</p>
+    </section>
+
+    <section class="suggestions">
+      <button data-question="C'est quoi le Forex ?">📈 Comprendre le Forex</button>
+      <button data-question="Comment fonctionne XAUUSD ?">🥇 Le marché de l'or</button>
+      <button data-question="Comment gérer le risque en trading ?">🛡️ Gestion du risque</button>
+      <button data-question="C'est quoi le CPI ?">📰 Actualités économiques</button>
+    </section>
+
+    <section class="chat" aria-label="Conversation">
+      <div id="messages" class="messages" aria-live="polite">
+        <article class="message bot">
+          <span class="avatar">NF</span>
+          <div class="bubble">
+            <strong>Nomad Finance</strong>
+            <p>Salam ! 👋 Bienvenue. Je suis ton assistant financier. Pose-moi une question sur le Forex, le Gold, l'économie ou la gestion du risque.</p>
+          </div>
+        </article>
+      </div>
+
+      <div id="typing" class="typing" hidden>Nomad Finance prépare sa réponse…</div>
+
+      <form id="chat-form" class="composer">
+        <label class="sr-only" for="question">Ta question financière</label>
+        <input id="question" type="text" maxlength="500"
+          placeholder="Pose ta question financière..." autocomplete="off" required>
+        <button type="submit" aria-label="Envoyer le message">➤</button>
+      </form>
+      <p class="hint">Entrée pour envoyer · Les réponses sont issues d'une base prédéfinie.</p>
+    </section>
+
+    <footer>
+      <p>Nomad Finance © 2026</p>
+      <p>Contenu éducatif uniquement. Aucune réponse ne garantit un gain financier.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
